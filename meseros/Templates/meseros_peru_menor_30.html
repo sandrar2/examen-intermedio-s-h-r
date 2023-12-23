@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %}
+
+
+{% block content %}
+  <h2>Meseros de Perú menores de 30 años</h2>
+  <ul>
+    {% for meseros in meseros_peru_menor_30 %}
+      <li>{{ meseros.nombre }} - {{ meseros.edad }} años</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

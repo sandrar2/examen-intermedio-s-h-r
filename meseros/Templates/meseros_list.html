@@ -1,0 +1,10 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h2>Lista de Meseros</h2>
+  <ul>
+    {% for data in meseros_list %}
+      <li>{{ data.nombre }} - {{ data.edad }} soles</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

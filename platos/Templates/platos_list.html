@@ -1,0 +1,10 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h2>Lista de Platos</h2>
+  <ul>
+    {% for data in platos_list %}
+      <li>{{ data.nombre }} - {{ data.precio }} soles</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

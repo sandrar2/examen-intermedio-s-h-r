@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h2>Platillos de Perú con precio mayor a 40 soles</h2>
+  <ul>
+    {% for data in platillos_peru_mayor_40 %}
+      <li>{{ data.nombre }} - {{ data.precio }} soles</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+
