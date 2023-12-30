@@ -50,13 +50,14 @@ def meseros_mayores_de_25(request):
     meseros_mayores = Meseros.objects.filter(edad__gt=25)
     return render(request, 'meseros_mayores_de_25.html', {'meseros_mayores': meseros_mayores})
 
-def meseros_peruanos(request):
-    meseros_peruanos = Meseros.objects.filter(nacionalidad='peru')
-    return render(request, 'meseros_peruanos.html', {'meseros_peruanos': meseros_peruanos})
+class MeserosPeruView(generics.ListAPIView):
+    queryset = Meseros.objects.filter(nacionalidad='peru')
+    serializer_class = MeseroSerializer
 
-def crear_mesero(request):
-    crear_mesero = Meseros.objects.all()
-    return render(request, 'crear_mesero.html', {'crear_mesero': crear_mesero})
+
+class CrearMeseroView(generics.CreateAPIView):
+    queryset = Meseros.objects.all()
+    serializer_class = MeseroSerializer
 
 class EditarMeseroView(UpdateView):
     model = Meseros
