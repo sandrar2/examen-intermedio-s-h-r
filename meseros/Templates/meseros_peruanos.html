@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meseros Peruanos</title>
+</head>
+<body>
+    <h1>Meseros Peruanos</h1>
+    <ul>
+        {% for mesero in meseros_peruanos %}
+            <li>
+                <strong>Nombre:</strong> {{ mesero.nombre }}<br>
+                <strong>Edad:</strong> {{ mesero.edad }}<br>
+                <strong>Nacionalidad:</strong> {{ mesero.nacionalidad }}<br>
+                <strong>DNI:</strong> {{ mesero.dni }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

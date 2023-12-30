@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Platos Mayores de 50</title>
+</head>
+<body>
+    <h1>Platos Mayores de 50</h1>
+    <ul>
+        {% for platos in platos_mayores %}
+            <li>
+                <strong>Nombre:</strong> {{ platos.nombre }}<br>
+                <strong>Precio:</strong> {{ platos.precio }}<br>
+                <strong>Procedencia:</strong> {{ platos.procedencia }}<br>
+
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

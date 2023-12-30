@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meseros Mayores de 25</title>
+</head>
+<body>
+    <h1>Meseros Mayores de 25 años</h1>
+    <ul>
+        {% for mesero in meseros_mayores %}
+            <li>
+                <strong>Nombre:</strong> {{ mesero.nombre }}<br>
+                <strong>Edad:</strong> {{ mesero.edad }}<br>
+                <strong>Nacionalidad:</strong> {{ mesero.nacionalidad }}<br>
+                <strong>DNI:</strong> {{ mesero.dni }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+

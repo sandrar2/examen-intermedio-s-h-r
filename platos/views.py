@@ -28,3 +28,8 @@ def eliminar_platos_menor_15(request):
     }
 
     return render(request, 'eliminar_platos_menor_15.html', context=data_context)
+
+def platos_mayores_de_50(request):
+    platos_mayores = Platos.objects.filter(precio__gt=50)
+    return render(request, 'platos_mayores_de_50.html', {'platos_mayores': platos_mayores})
+

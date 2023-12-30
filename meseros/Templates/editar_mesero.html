@@ -1,0 +1,11 @@
+
+
+{% block content %}
+  <h1>Editar Meseros</h1>
+  <form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar cambios</button>
+  </form>
+  <a href="{% url 'meseros_list' %}">Volver a la lista de meseros</a>
+{% endblock %}
